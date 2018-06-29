@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_to_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+   <io.supercharge.shimmerlayout.ShimmerLayout
+       android:id="@+id/shimmerLayout"
+       app:shimmer_animation_duration="1200"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <include layout="@layout/item_place_holder_layout"></include>
+           <include layout="@layout/item_place_holder_layout"/>
+           <include layout="@layout/item_place_holder_layout"/>
+           <include layout="@layout/item_place_holder_layout"/>
+           <include layout="@layout/item_place_holder_layout"/>
+
+       </LinearLayout>
+
+
+   </io.supercharge.shimmerlayout.ShimmerLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
